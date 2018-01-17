@@ -17,11 +17,11 @@ body {
   -o-background-size: cover;
 }
 
-.rolls {
+.buttons {
   text-align: center;
 }
 
-.rolls button{
+.buttons button{
   margin: 5px;
   height: 45px;
   width: 45px;
@@ -31,7 +31,7 @@ body {
   background-color: #0f8c31;
 }
 
-.rolls button:hover {
+.buttons button:hover {
   background-color: #06ff06;
 }
 

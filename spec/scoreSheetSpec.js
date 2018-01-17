@@ -14,6 +14,7 @@ describe("ScoreSheet", function(){
 		it("should log the result of the 2nd frame to the scoreSheet", function(){
 			frameRoll([0,5]);
 			frameRoll([4,3]);
+			console.log(scoreSheet.frames);
 			expect(scoreSheet.frames[0].roll).toEqual([0,5]);
 			expect(scoreSheet.frames[1].roll).toEqual([4,3]);
 		});

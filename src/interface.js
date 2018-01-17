@@ -1,20 +1,26 @@
 $(document).ready(function() {
 
 	var scoreSheet = new ScoreSheet();
-	// var frame = new Frame();
+	var counter = 0
 
 	for(var i = 0; i < 11; i++) {
-		clickButton(i)
+		clickButton(i);
 	}
 
 	function displayRoll(rollDisplay) {
-		$("#score-table tr:eq(1) td:eq(0)").html(rollDisplay)
+		var frameId = $("[data-frame-id=" + counter + "]")
+		frameId.html(rollDisplay);
+	}
+
+	function incrementFrame(){
+		return counter += 1
 	}
 
 	function clickButton(i) {
 		$("#bt" + i).on("click", function(){
 			$("#buttons button:eq(i)").html(i);
-			displayRoll(i)
+			displayRoll(i);
+			incrementFrame();
 		});
 	}
 });
