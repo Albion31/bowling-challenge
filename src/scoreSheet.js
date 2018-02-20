@@ -70,4 +70,8 @@ ScoreSheet.prototype.displayScore = function(frameNumber){
 	function isNotBonus() {
 		return currentFrameFirstRoll + currentFrameSecondRoll < 10;
 	}
+
+	return {
+		init: init
+	}
 };

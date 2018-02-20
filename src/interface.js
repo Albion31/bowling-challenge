@@ -23,4 +23,16 @@ $(document).ready(function() {
 			incrementFrame();
 		});
 	}
+// \ScoreSheet.prototype.init()
+
+	for(var i = 0; i < 11; i++) {
+		totalScore(i);
+	}
+
+	function totalScore(i) {
+		$("#bt" + i).on("click", function(){
+			$("#total-score td:eq(i)").html(scoreSheet.displayScore());
+			// console.log(scoreSheet.displayScore());
+		});
+	}
 });
